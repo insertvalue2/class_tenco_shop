@@ -123,6 +123,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.10.0"
+  nav:
+    dependency: "direct main"
+    description:
+      name: nav
+      sha256: d09206bcaed5ab10250ea5129d13c8b959a837cd9a3ef4b048f7892218d82f9d
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.4.2"
   path:
     dependency: transitive
     description:

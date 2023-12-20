@@ -1,6 +1,8 @@
 import 'package:demo_commerce_app/constants.dart';
+import 'package:demo_commerce_app/screens/sign_in/sign_in_screen.dart';
 import 'package:demo_commerce_app/screens/splash/components/splash_content.dart';
 import 'package:flutter/material.dart';
+import 'package:nav/nav.dart';
 
 class SplashScreen extends StatefulWidget {
   static String routeName = '/splash';
@@ -73,7 +75,15 @@ class _SplashScreenState extends State<SplashScreen> {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    // 차이점 살펴 보기
+                    //Navigator.pushNamed(context, SignInScreen.routeName);
+
+                    // 현재 페이지에서 새로운 페이지로 이동하면서 히스토리를 모두 비우기
+                    // (route) => false
+                    Navigator.pushNamedAndRemoveUntil(
+                        context, SignInScreen.routeName, (route) => false);
+                  },
                   child: const Text('Continue'),
                 ),
               ),
